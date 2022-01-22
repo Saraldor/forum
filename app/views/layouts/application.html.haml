@@ -1,0 +1,21 @@
+!!!
+%html 
+%head
+  %title HolmDev
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  %link{ rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Lato", type: "text/css" }
+  = javascript_pack_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+%body
+  %header
+    #logo 
+      %p HolmDev Rails Forum
+      #buttons
+      = link_to "New Post", new_post_path
+  .wrapper    
+    %p.notice= notice
+    %p.alert= alert
+  .wrapper  
+  = yield
+
+  
