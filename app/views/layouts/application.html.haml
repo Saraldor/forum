@@ -7,15 +7,14 @@
   = javascript_pack_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
 %body
-  %header
+  %header.main_header.clearfix
     #logo 
       %p HolmDev Rails Forum
-      #buttons
+    #buttons
       = link_to "New Post", new_post_path
-  .wrapper    
+  .wrapper
     %p.notice= notice
     %p.alert= alert
-  .wrapper  
+  .wrapper
   = yield
-
   
